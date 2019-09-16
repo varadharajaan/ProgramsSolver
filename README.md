@@ -1,4 +1,4 @@
-# ProgramsSolver
+# Programs-Solver
 Contains many self solved programs like Ds algos, dynamic programming, brut force , iterative solving etc. 
 Also i took programs from hackerrank and tried solving here.
 
