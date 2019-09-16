@@ -23,21 +23,19 @@ public class Panagram {
         IntStream.range(0, str.length())
                 .forEach(index -> set.add(str.charAt(index)));
 
-        return set.size()==26 ?true: false;
+        return set.size() == 26 ? true : false;
     }
 
     public static boolean isPangramWithStreams(String str) {
         if (str == null) {
             return false;
-        }
-        else
-        return str.toUpperCase()
-                .chars()
-                .filter(item -> ((item >= 'A' && item <= 'Z')))
-                .mapToObj(c -> (char) c)
-                .collect(Collectors.toMap(item->item, k-> Boolean.TRUE, (p1,p2)->p1))
-                .size()== 26;
-
+        } else
+            return str.toUpperCase()
+                    .chars()
+                    .filter(item -> ((item >= 'A' && item <= 'Z')))
+                    .mapToObj(c -> (char) c)
+                    .collect(Collectors.toMap(item -> item, k -> Boolean.TRUE, (p1, p2) -> p1))
+                    .size() == 26;
 
 
     }
@@ -49,18 +47,18 @@ public class Panagram {
 
         String str1 = "idhgfiu79ds7f;";
 
-        if ( str.length()<26)
+        if (str.length() < 26)
             System.out.println("failure for : :=> " + str);
 
-        if ( str1.length()<26)
+        if (str1.length() < 26)
             System.out.println("failure for : :=> " + str1);
 
-       if (isAlpha(str)&& isPerfectAnagram(str)&& isPangramWithStreams(str))
-           System.out.println("success for : :=> " + str);
-       else
-           System.out.println("failure for : :=> " + str);
+        if (isAlpha(str) && isPerfectAnagram(str) && isPangramWithStreams(str))
+            System.out.println("success for : :=> " + str);
+        else
+            System.out.println("failure for : :=> " + str);
 
-        if (isAlpha(str1)&& isPerfectAnagram(str1)&& isPangramWithStreams(str1))
+        if (isAlpha(str1) && isPerfectAnagram(str1) && isPangramWithStreams(str1))
             System.out.println("success for : :=> " + str1);
         else
             System.out.println("failure for : :=> " + str1);

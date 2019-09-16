@@ -1,24 +1,23 @@
 package SimpleJavaOOPS.packageA;
 
 public class DailyWages extends Employees {
-    
+
+    private String gender;
+    private String workingHours;
     public DailyWages(int id, String name, String mail, String salary) {
         super(id, name, mail, salary);
     }
 
-    private String gender;
-    private String workingHours;
-    
     @Override
     public void salaryCalulation() {
-        
+
         System.out.println("dailyWages salary present overriden method");
-        
+
     }
-    
+
     @Override
     public int daysPresent() {
-        
+
         System.out.println("DailyWages  present overriden method");
         return 0;
     }
@@ -44,6 +43,5 @@ public class DailyWages extends Employees {
         this.workingHours = workingHours;
     }
 
-    
-    
+
 }

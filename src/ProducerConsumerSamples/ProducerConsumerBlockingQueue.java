@@ -27,8 +27,7 @@ public class ProducerConsumerBlockingQueue {
         String str = "abc/efg/";
 
 
-
-        public boolean checkProperly (  boolean check ) {
+        public boolean checkProperly(boolean check) {
 
             while (true) {
 
@@ -40,8 +39,6 @@ public class ProducerConsumerBlockingQueue {
                 }
             }
         }
-
-
 
 
         public void run() {

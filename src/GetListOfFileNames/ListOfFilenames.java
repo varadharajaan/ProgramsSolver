@@ -17,7 +17,7 @@ public class ListOfFilenames {
         File[] files = new File("/Users/vardamod/Downloads/CoderPad/Questions").listFiles();
 
 
-        for(File file : files) {
+        for (File file : files) {
             if (file.isFile()) {
                 results.add(file.getName());
             }

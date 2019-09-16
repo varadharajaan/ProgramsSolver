@@ -2,6 +2,6 @@ package ObjectPoolImplementation;
 
 public interface Poolable {
 
-	//state reset
-	void reset();
+    //state reset
+    void reset();
 }

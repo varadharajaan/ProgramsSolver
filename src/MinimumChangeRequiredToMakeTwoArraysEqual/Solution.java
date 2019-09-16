@@ -1,15 +1,11 @@
 package MinimumChangeRequiredToMakeTwoArraysEqual;
 
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
 import java.util.stream.IntStream;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
@@ -25,7 +21,7 @@ public class Solution {
                 throw new RuntimeException(ex);
             }
         })
-            .collect(toList());
+                .collect(toList());
 
         int bCount = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -36,15 +32,15 @@ public class Solution {
                 throw new RuntimeException(ex);
             }
         })
-            .collect(toList());
+                .collect(toList());
 
         List<Integer> result = Result.getMinimumDifference(a, b);
 
         bufferedWriter.write(
-            result.stream()
-                .map(Object::toString)
-                .collect(joining("\n"))
-            + "\n"
+                result.stream()
+                        .map(Object::toString)
+                        .collect(joining("\n"))
+                        + "\n"
         );
 
         bufferedReader.close();

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
+    List<String> activities = new ArrayList<>();
     private String name;
     private int gradeLevel;
     private double gpa;
     private String gender;
-    List<String> activities = new ArrayList<>();
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
@@ -49,7 +49,6 @@ public class Student {
     public void setGpa(double gpa) {
         this.gpa = gpa;
     }
-
 
 
     public List<String> getActivities() {

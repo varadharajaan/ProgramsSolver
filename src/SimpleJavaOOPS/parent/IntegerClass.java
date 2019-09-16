@@ -1,7 +1,7 @@
 package SimpleJavaOOPS.parent;
 
 public class IntegerClass {
-    
+
     private int value;
 
     public int getValue() {
@@ -11,7 +11,6 @@ public class IntegerClass {
     public void setValue(int value) {
         this.value = value;
     }
-    
-    
+
 
 }

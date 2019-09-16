@@ -21,16 +21,16 @@ public class MaximumRepeatingCharacter {
 
     private static String getMaximumRepeatingCharacter(String input) {
 
-        LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
 
         char[] chArr = input.toCharArray();
 
-        for(int i=0;i<input.length();i++) {
+        for (int i = 0; i < input.length(); i++) {
             if (map.containsKey(input.charAt(i))) {
                 char ch = input.charAt(i);
                 map.computeIfPresent(ch, MaximumRepeatingCharacter::apply);
-            }else {
-                map.putIfAbsent(input.charAt(i),1);
+            } else {
+                map.putIfAbsent(input.charAt(i), 1);
             }
         }
 
@@ -43,11 +43,11 @@ public class MaximumRepeatingCharacter {
 
     private static int apply(Object k, Object v) {
 
-        return (int) v+1;
+        return (int) v + 1;
     }
 
 
     private static Integer apply(Character k, Integer v) {
-        return v +1;
+        return v + 1;
     }
 }

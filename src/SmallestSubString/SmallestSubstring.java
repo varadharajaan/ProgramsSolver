@@ -38,30 +38,30 @@ public class SmallestSubstring {
             while (uniqueCounter == patLen) {
                 int tempLength = i - start + 1;
                 if (tempLength == patLen)
-                    return str.substring(start, i+1);
+                    return str.substring(start, i + 1);
 
                 // if current length is smaller update the result
                 if (result == "" || tempLength < result.length()) {
-                    result = str.substring(start, i+1);
+                    result = str.substring(start, i + 1);
                 }
                 // try to make the string smaller from beginning and check
-                headChar=str.charAt(start);
+                headChar = str.charAt(start);
 
                 // reduce headchar counter
-                if(map.containsKey(headChar)){
-                    int headCount=map.get(headChar)-1;// we are reducing
+                if (map.containsKey(headChar)) {
+                    int headCount = map.get(headChar) - 1;// we are reducing
                     // after removing first character, if value is zero
                     // it means unique character count should reduced
-                    if(headCount==0){
+                    if (headCount == 0) {
                         uniqueCounter = uniqueCounter - 1;
                     }
 
                     // update the map
-                    map.put(headChar,headCount);
+                    map.put(headChar, headCount);
                 }
 
                 // move head
-                start=start+1;
+                start = start + 1;
 
             }
         }
@@ -70,37 +70,37 @@ public class SmallestSubstring {
 
     public static void main(String[] args) {
         String str = "bcaacbc";
-        
+
         int value = shortestSubstring(str);
-        
+
         System.out.println(value);
     }
 
-	private static char[] getShortStringUtils(String str) {
-		char[] gfg = str.toCharArray();
-        Set<Character> chSet = new HashSet<Character> () ;
-        for (int i = 0; i < gfg.length; i++) { 
+    private static char[] getShortStringUtils(String str) {
+        char[] gfg = str.toCharArray();
+        Set<Character> chSet = new HashSet<Character>();
+        for (int i = 0; i < gfg.length; i++) {
             chSet.add((gfg[i]));
-        } 
-        
-        char[] refArr = new char[chSet.size()];
-         int temp =0;
-        for ( char ii : chSet) {
-        	
-        	refArr[temp] = ii;
-        	
-        	temp++;
-        	
         }
-		return refArr;
-	}
-	
-	
-	public static int shortestSubstring(String s) {
 
-	    char[] refArr = getShortStringUtils(s);
-	    String shortString =getShortestUniqueSubstring(refArr, s);
-	    return shortString.length();
+        char[] refArr = new char[chSet.size()];
+        int temp = 0;
+        for (char ii : chSet) {
 
-	    }
+            refArr[temp] = ii;
+
+            temp++;
+
+        }
+        return refArr;
+    }
+
+
+    public static int shortestSubstring(String s) {
+
+        char[] refArr = getShortStringUtils(s);
+        String shortString = getShortestUniqueSubstring(refArr, s);
+        return shortString.length();
+
+    }
 }

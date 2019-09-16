@@ -1,7 +1,9 @@
 package PrimeFactorization;
 
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.LongStream;
 
 import static java.util.stream.Collectors.toList;
@@ -20,10 +22,10 @@ public class PrimeFactorization {
 
         list.stream()
                 .distinct()
-                .map(n->n)
-                .forEach(s-> System.out.println(s));
+                .map(n -> n)
+                .forEach(s -> System.out.println(s));
 
-        Map<Long, Long> f2m = factors(2,num).boxed()
+        Map<Long, Long> f2m = factors(2, num).boxed()
                 .collect(toMap(f -> f, f -> new Long(1), Long::sum, LinkedHashMap::new));
 
         List<Long> factorsList = new ArrayList<>(f2m.keySet());

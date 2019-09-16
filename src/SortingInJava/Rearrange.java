@@ -1,77 +1,65 @@
 package SortingInJava;
 
-class Rearrange  
-{ 
+class Rearrange {
 
     // The function to rearrange an array in-place so that arr[i] 
 
     // becomes arr[arr[i]]. 
 
-    void rearrange(int arr[], int n)  
+    public static void main(String[] args) {
 
-    { 
+        Rearrange rearrange = new Rearrange();
 
-        // First step: Increase all values by (arr[arr[i]]%n)*n 
+        int arr[] = {3, 2, 0, 1};
 
-        for (int i = 0; i < n; i++) 
+        int n = arr.length;
 
-            arr[i] += (arr[arr[i]] % n) * n; 
 
-  
+        System.out.println("Given Array is :");
 
-        // Second Step: Divide all values by n 
+        rearrange.printArr(arr, n);
 
-        for (int i = 0; i < n; i++) 
 
-            arr[i] /= n; 
+        rearrange.rearrange(arr, n);
 
-    } 
 
-  
+        System.out.println("Modified Array is :");
+
+        rearrange.printArr(arr, n);
+
+    }
+
 
     // A utility function to print an array of size n 
 
-    void printArr(int arr[], int n)  
+    void rearrange(int arr[], int n) {
 
-    { 
+        // First step: Increase all values by (arr[arr[i]]%n)*n
 
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; i++)
 
-            System.out.print(arr[i] + " "); 
+            arr[i] += (arr[arr[i]] % n) * n;
 
-        System.out.println(""); 
 
-    } 
+        // Second Step: Divide all values by n
 
-  
+        for (int i = 0; i < n; i++)
+
+            arr[i] /= n;
+
+    }
+
+
 
     /* Driver program to test above functions */
 
-    public static void main(String[] args)  
+    void printArr(int arr[], int n) {
 
-    { 
+        for (int i = 0; i < n; i++)
 
-        Rearrange rearrange = new Rearrange(); 
+            System.out.print(arr[i] + " ");
 
-        int arr[] = {3, 2, 0, 1}; 
+        System.out.println("");
 
-        int n = arr.length; 
-
-  
-
-        System.out.println("Given Array is :"); 
-
-        rearrange.printArr(arr, n); 
-
-  
-
-        rearrange.rearrange(arr, n); 
-
-  
-
-        System.out.println("Modified Array is :"); 
-
-        rearrange.printArr(arr, n); 
-
-    } 
+    }
 } 

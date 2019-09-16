@@ -7,15 +7,14 @@ public class MyMergeSort {
     private int[] tempArray;
 
     private int number;
-    
-    public static void main(String[] args )
-    {
-        int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
+
+    public static void main(String[] args) {
+        int[] inputArr = {45, 23, 11, 89, 77, 98, 4, 28, 65, 43};
         MyMergeSort my = new MyMergeSort();
         my.sort(inputArr);
         System.out.println(Arrays.toString(inputArr));
     }
-    
+
     public void sort(int[] arrayVal) {
         this.arrayVal = arrayVal;
         this.number = arrayVal.length;

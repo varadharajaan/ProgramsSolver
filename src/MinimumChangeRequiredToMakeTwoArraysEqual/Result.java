@@ -1,17 +1,7 @@
 package MinimumChangeRequiredToMakeTwoArraysEqual;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
-
+import java.util.LinkedList;
+import java.util.List;
 
 
 class Result {
@@ -26,17 +16,17 @@ class Result {
      */
 
     public static List<Integer> getMinimumDifference(List<String> a, List<String> b) {
-    // Write your code here
-    
-        
-    String[] a1 = a.toArray(new String[0]);
-    String[] b1 = b.toArray(new String[0]);
-    List<Integer> list = new LinkedList<Integer>();
-    for(int i =0;i<a1.length;i++) {
-        int count = countManipulations(a1[i],b1[i]);
-        list.add(count);
-    }
-    return list;
+        // Write your code here
+
+
+        String[] a1 = a.toArray(new String[0]);
+        String[] b1 = b.toArray(new String[0]);
+        List<Integer> list = new LinkedList<Integer>();
+        for (int i = 0; i < a1.length; i++) {
+            int count = countManipulations(a1[i], b1[i]);
+            list.add(count);
+        }
+        return list;
     }
 
     public static int countManipulations(String s1, String s2) {

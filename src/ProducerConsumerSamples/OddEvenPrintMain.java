@@ -10,6 +10,39 @@ public class OddEvenPrintMain {
     int count = 1;
     int MAX = 20;
 
+    public static void main(String[] args) {
+
+        OddEvenPrintMain oep = new OddEvenPrintMain();
+        oep.odd = true;
+        Thread t1 = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                oep.printEven();
+
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                oep.printOdd();
+
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void printOdd() {
         synchronized (this) {
             while (count < MAX) {
@@ -60,38 +93,5 @@ public class OddEvenPrintMain {
 
             }
         }
-    }
-
-    public static void main(String[] args) {
-
-        OddEvenPrintMain oep = new OddEvenPrintMain();
-        oep.odd = true;
-        Thread t1 = new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                oep.printEven();
-
-            }
-        });
-        Thread t2 = new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                oep.printOdd();
-
-            }
-        });
-
-        t1.start();
-        t2.start();
-
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 }

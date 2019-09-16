@@ -1,17 +1,14 @@
 package SimpleJavaOOPS.packageA;
 
 public class MonthlyWages extends Employees {
-    
-    
-    public MonthlyWages(int id, String name, String mail, String salary) {
-		super(id, name, mail, salary);
-	}
 
 
-	private String city;
+    private String city;
     private String location;
-    
-    
+    public MonthlyWages(int id, String name, String mail, String salary) {
+        super(id, name, mail, salary);
+    }
+
     public void alldayScuess() {
         System.out.println("success");
     }

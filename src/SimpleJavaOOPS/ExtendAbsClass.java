@@ -4,7 +4,7 @@ public class ExtendAbsClass extends absClass {
 
     @Override
     public void check() {
-        
+
     }
 
     @Override

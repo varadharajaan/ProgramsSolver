@@ -1,7 +1,8 @@
 package ObjectPoolImplementation;
 
 import javafx.geometry.Point2D;
-public interface Image extends Poolable{
+
+public interface Image extends Poolable {
 
     void draw();
 

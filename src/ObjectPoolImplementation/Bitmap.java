@@ -15,7 +15,7 @@ public class Bitmap implements Image {
 
     @Override
     public void draw() {
-        System.out.println("Drawing "+name+" @ "+location);
+        System.out.println("Drawing " + name + " @ " + location);
     }
 
     @Override
@@ -28,11 +28,11 @@ public class Bitmap implements Image {
         this.location = location;
     }
 
-	@Override
-	public void reset() {
-		location = null;
-		System.out.println("Bitmap is reset");
-	}
+    @Override
+    public void reset() {
+        location = null;
+        System.out.println("Bitmap is reset");
+    }
 
-    
+
 }

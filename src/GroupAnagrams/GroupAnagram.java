@@ -11,8 +11,7 @@ import java.util.List;
  */
 public class GroupAnagram {
 
-    private static void printAnagrams(String arr[])
-    {
+    private static void printAnagrams(String arr[]) {
         HashMap<String, List<String>> map = new HashMap<>();
 
 
@@ -28,8 +27,7 @@ public class GroupAnagram {
             if (map.containsKey(newWord)) {
 
                 map.get(newWord).add(word);
-            }
-            else {
+            } else {
 
 
                 List<String> words = new ArrayList<>();
@@ -39,14 +37,13 @@ public class GroupAnagram {
         }
 
         map.entrySet().stream()
-                .forEach(s-> System.out.println(s.getValue()));
+                .forEach(s -> System.out.println(s.getValue()));
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
 
-        String arr[] = { "cat", "dog", "tac", "god", "act" ,"check", "kcech"};
+        String arr[] = {"cat", "dog", "tac", "god", "act", "check", "kcech"};
         printAnagrams(arr);
     }
 }

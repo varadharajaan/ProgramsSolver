@@ -8,9 +8,10 @@ public class SecondSmallestInArray {
 
     public static void main(String[] args) {
 
-        int [] input= {3,5,7,9,2};
+        int[] input = {3, 5, 7, 9, 2};
         System.out.println(getSecondSmallest(input));
     }
+
     private static int getSecondSmallest(int[] input) {
         int index = Integer.MIN_VALUE;
         for (int i = 0; i < input.length - 1; i++) {
