@@ -14,9 +14,8 @@ public class HackerrankArrayConversion {
     public static void main(String[] args) {
 
         List<List<Integer>> aList = new ArrayList<>();
-
         List<List<String>> sList = new ArrayList<>();
-
+        
         ArrayList<Integer> a1 = new ArrayList<>();
         a1.add(1);
         a1.add(0);
@@ -45,16 +44,16 @@ public class HackerrankArrayConversion {
         a4.add(0);
         aList.add(a4);
 
-        List<String> s1 = Arrays.asList("NYC", "New Delhi");
+       List<String> s1 = Arrays.asList("NYC", "New Delhi");
        List<String> s2 = Arrays.asList("AUstraila", "Norway");
 
-        sList.add(s1);
-        sList.add(s2);
+       sList.add(s1);
+       sList.add(s2);
 
-        listOfStringToArray(s1);
-        listOfListTo2DArray(aList);
-        listToArray(a1);
-        listOfListOfStringTo2DArray(sList);
+       listOfStringToArray(s1);
+       listOfListTo2DArray(aList);
+       listToArray(a1);
+       listOfListOfStringTo2DArray(sList);
     }
 
     private static void listToArray(List<Integer> list) {
